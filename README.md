@@ -1,2 +1,1 @@
-# ra2581392413008
-Repositório do aluno BRENO DE LUCA BOFF.
+Repositório do aluno Breno de Luca Boff no curso Desenvolvimento de Software Multiplataforma pela Fatec Jacareí.
