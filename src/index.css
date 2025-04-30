@@ -24,3 +24,19 @@
   font-style: normal;
   font-variation-settings: "wdth" 75;
 }
+
+.cabecalho {
+  @apply w-full p-4 border-b shadow-sm flex justify-center items-center;
+}
+
+.mug {
+  @apply w-25 rounded-4xl;
+}
+
+.nome {
+  @apply text-2xl font-bold justify-center m-10;
+}
+
+.logo {
+  @apply w-10;
+}

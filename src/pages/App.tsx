@@ -2,8 +2,9 @@ export default function App() {
   return (
     <main className="min-h-screen bg-blue-200 text-gray-800 font-sans">
       {/* Header */}
-      <header className="w-full p-4 border-b shadow-sm flex justify-between items-center">
-        <h1 className="roboto-titulo text-2xl font-bold">Breno de Luca</h1>
+      <header className="cabecalho">
+        <img src="./mug.jpg" className="mug" />
+        <h1 className="roboto-titulo nome">Breno de Luca</h1>
         {/* Contato */}
         <nav className="space-x-4">
           <a
@@ -11,14 +12,14 @@ export default function App() {
             target="_blank"
             className="text-gray-700 hover:underline"
           >
-            GitHub
+            <img src="./github.png" alt="GitHub" className="logo" />
           </a>
           <a
             href="https://linkedin.com/in/brenoluca"
             target="_blank"
             className="text-gray-700 hover:underline"
           >
-            LinkedIn
+            <img src="./linkedin.png" alt="LinkedIn" className="logo" />
           </a>
         </nav>
       </header>
@@ -30,8 +31,7 @@ export default function App() {
             Sobre Mim
           </h2>
           <p className="roboto-texto text-center">
-            Cursando Desenvolvimento de Software Multiplataforma na Fatec
-            Jacareí.
+            Cursando Desenvolvimento de Software Multiplataforma.
           </p>
         </section>
 
