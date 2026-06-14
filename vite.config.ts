@@ -6,16 +6,17 @@ import { defineConfig, loadEnv } from "vite";
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, ".", "");
   return {
-    base: "/ra2581392413008/", // Mantém o caminho correto para o GitHub Pages
+    root: "src", // Muda a raiz do Vite: procura o index.html de dev aqui dentro
+    base: "/ra2581392413008/",
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "."),
+        "@": path.resolve(__dirname, "./src"),
       },
     },
     build: {
-      outDir: "docs", // O Vite vai criar a pasta docs/ e colocar o build aqui
-      emptyOutDir: true,
+      outDir: "../", // O Vite atira o site compilado diretamente para a raiz do seu RA
+      emptyOutDir: false, // Impede que o Vite apague o seu ficheiro .nojekyll e o README.md
     },
     server: {
       hmr: process.env.DISABLE_HMR !== "true",
