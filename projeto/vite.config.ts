@@ -6,7 +6,7 @@ import { defineConfig, loadEnv } from "vite";
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, ".", "");
   return {
-    base: "/ra2581392413008/", // Mantém o caminho correto para o GitHub Pages
+    base: "/ra2581392413008/",
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
@@ -14,8 +14,8 @@ export default defineConfig(({ mode }) => {
       },
     },
     build: {
-      outDir: "docs", // O Vite vai criar a pasta docs/ e colocar o build aqui
-      emptyOutDir: true,
+      outDir: "../", // O Vite vai gerar os ficheiros finais diretamente na raiz do seu RA
+      emptyOutDir: false, // Regra essencial: Impede que o Vite elimine o README.md ou a própria pasta 'projeto'
     },
     server: {
       hmr: process.env.DISABLE_HMR !== "true",
