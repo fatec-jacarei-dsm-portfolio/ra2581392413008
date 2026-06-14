@@ -1,21 +1,24 @@
-import tailwindcss from '@tailwindcss/vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
-import {defineConfig, loadEnv} from 'vite';
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
+import { defineConfig, loadEnv } from "vite";
 
-export default defineConfig(({mode}) => {
-  const env = loadEnv(mode, '.', '');
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, ".", "");
   return {
+    base: "/ra2581392413008/", // Define o caminho da subpasta no GitHub Pages
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        "@": path.resolve(__dirname, "."),
       },
     },
+    build: {
+      outDir: "../", // Joga o build compilado direto na pasta do seu RA
+      emptyOutDir: false, // Muito importante: impede o Vite de apagar seus outros arquivos na pasta raiz
+    },
     server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
-      hmr: process.env.DISABLE_HMR !== 'true',
+      hmr: process.env.DISABLE_HMR !== "true",
     },
   };
 });
