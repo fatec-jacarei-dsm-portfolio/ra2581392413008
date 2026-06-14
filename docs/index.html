@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio Acadêmico - Breno</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Outfit", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      body {
+        background-color: #f8fafc;
+        color: #0f172a;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <main class="flex-grow">
+      <section
+        class="relative flex flex-col items-center justify-center pt-20 pb-32 px-6 overflow-hidden min-h-screen"
+      >
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-gradient-to-b from-indigo-50/50 to-transparent -z-10"
+        ></div>
+
+        <div class="flex flex-col items-center text-center space-y-8 max-w-3xl">
+          <div class="relative mb-4 group">
+            <div
+              class="absolute inset-0 bg-indigo-500 rounded-full blur-2xl opacity-20 transition-opacity"
+            ></div>
+            <img
+              src="https://github.com/brn-lc.png"
+              alt="Foto de Perfil"
+              class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-2xl relative z-10 ring-4 ring-indigo-50"
+            />
+          </div>
+
+          <div class="space-y-4">
+            <h1
+              class="text-4xl md:text-6xl font-bold font-display tracking-tight text-slate-900"
+            >
+              Olá, eu sou o <span class="text-indigo-600">Breno</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-600 font-medium">
+              Estudante de Desenvolvimento de Software Multiplataforma
+            </p>
+            <p class="text-slate-500 max-w-2xl mx-auto leading-relaxed">
+              Desenvolvedor em formação com vivência em suporte e gestão de
+              configuração de sistemas (PLM). Motivado por criar soluções
+              tecnológicas que facilitem o dia a dia.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+            <a
+              href="https://linkedin.com/in/brenoluca"
+              target="_blank"
+              class="flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition-all shadow-lg hover:-translate-y-1"
+            >
+              <i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn
+            </a>
+            <a
+              href="https://github.com/brn-lc"
+              target="_blank"
+              class="flex items-center gap-2 px-6 py-3 bg-white text-slate-700 border border-slate-200 rounded-full font-semibold hover:bg-slate-50 transition-all shadow-sm hover:-translate-y-1"
+            >
+              <i data-lucide="github" class="w-5 h-5"></i> GitHub
+            </a>
+            <a
+              href="#projects"
+              class="flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-full font-semibold hover:bg-slate-800 transition-all shadow-lg hover:-translate-y-1"
+            >
+              Ver Projetos
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex flex-col items-center mb-16 space-y-4">
+            <h2
+              class="text-3xl md:text-5xl font-bold font-display text-slate-900"
+            >
+              Jornada Acadêmica
+            </h2>
+            <p class="text-slate-500 text-center max-w-xl">
+              Explore a evolução técnica através dos projetos desenvolvidos em
+              cada etapa da minha graduação.
+            </p>
+          </div>
+
+          <div
+            id="tab-menu"
+            class="flex flex-wrap justify-center gap-2 mb-12 p-1.5 bg-slate-100 rounded-2xl w-fit mx-auto shadow-inner"
+          >
+            <button
+              data-semester="1"
+              class="semester-tab relative px-6 py-3 rounded-xl font-bold text-sm transition-all text-slate-500 hover:text-slate-700"
+            >
+              1º Semestre
+            </button>
+            <button
+              data-semester="2"
+              class="semester-tab relative px-6 py-3 rounded-xl font-bold text-sm transition-all text-slate-500 hover:text-slate-700"
+            >
+              2º Semestre
+            </button>
+            <button
+              data-semester="3"
+              class="semester-tab relative px-6 py-3 rounded-xl font-bold text-sm transition-all text-slate-500 hover:text-slate-700"
+            >
+              3º Semestre
+            </button>
+            <button
+              data-semester="4"
+              class="semester-tab relative px-6 py-3 rounded-xl font-bold text-sm transition-all text-indigo-600 bg-white shadow-sm"
+            >
+              4º Semestre
+            </button>
+          </div>
+
+          <div
+            id="projects-container"
+            class="flex flex-wrap justify-center gap-6 min-h-[400px]"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-12 px-6 bg-slate-900 border-t border-white/5">
+      <div class="max-w-6xl mx-auto text-center">
+        <p class="text-slate-500 text-sm font-medium tracking-wide">
+          © 2026 — Portfólio Digital Acadêmico
+        </p>
+        <p class="text-slate-600 text-xs mt-2">
+          Desenvolvido com TypeScript & Tailwind CSS
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
