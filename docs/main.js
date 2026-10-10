@@ -37,7 +37,7 @@ const PROJECTS = [
         title: "Plataforma Educacional Scrum",
         description: "Recurso web interativo desenvolvido para introduzir os fundamentos, papéis e cerimônias do framework ágil Scrum para novos estudantes e profissionais.",
         technologies: ["HTML", "CSS", "JavaScript"],
-        repoUrl: "https://github.com/frevisto/hardstop",
+        repoUrl: "https://github.com/brn-lc/ava-scrum/",
         semester: 1,
     },
 ];
